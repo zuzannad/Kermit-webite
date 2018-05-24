@@ -1,43 +1,54 @@
-* { 
-	padding: 0; 
-	margin: 0; 
+* {
+	padding: 0;
+	margin: 0;
 	box-sizing: border-box;
 	color: white;
 }
 
-html { 
-	font-size: 10px; 
-	
+html {
+	font-size: 10px;
+
 }
 
-header { 
+header {
 	height: 100vh;
+	width: 100%;
 	background-color: black;
-	position: relative;
+	position: fixed; /*element przyczepiony na stałe, nachodzenie elementów na header*/
+	top: 0;  /*nachodzenie elementów na header*/
+	left: 0; /*nachodzenie elementów na header*/
 	overflow-x: hidden;
 	font-family: 'Oswald', sans-serif;
+	z-index: 1 /*który element ma być wyżej, nachodzenie elementów na header, nie działa przy position: static (domyślnej)*/
 }
 
-main { 
-	height: 100vh;
+main {
+	height: 100vh; /*nachodzenie elementów na header*/
 	background-color: white;
+	margin-top: 100vh;
+	z-index: 2; /*nachodzenie elementów na header*/
+	position: relative; /*nachodzenie elementów na header*/
 }
 
-header img { 
-	position: absolute; 
-	bottom: 0; 
-	height: 50vh;
+header img {
+	position: absolute;
+	bottom: 0;
+	height: 60vh;
 	right: -45%;
 }
 
-header nav { 
-	position: absolute; 
+header nav {
+	position: absolute;
 	right: 7%;
-	top: 4%; 
-	font-size: 8rem;
+	top: 4%;
+	font-size: 3rem;
 }
 
-header hgroup { 
+.icon-menu:hover {
+	color: #e00f0f;
+}
+
+header hgroup {
 	position: absolute;
 	top: 14%;
 	left: 7%;
@@ -45,31 +56,49 @@ header hgroup {
 	z-index: 2;
 }
 
-header h2 { 
-	font-size: 8rem;
+header h2 {
+	font-size: 4rem;
+	color: #e00f0f;
 }
 
-header h3 { 
-	font-size: 5rem;
+header h3 {
+	font-size: 2rem;
 	font-weight: 400;
 }
 
-#arrow { 
-	width: 96px;
-	height: 96px;
-	position: absolute; 
-	bottom: 10%;
-	border: 6px solid red; 
+#arrow {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	bottom: 5%;
+	border: 4px solid #e00f0f;
 	left: 50%;
-	transform: translateX(-50%); 
-	font-size: 5.1rem;
+	transform: translateX(-50%);
+	font-size: 2.1rem;
 	text-align: center;
 	border-radius: 50%;
-} 
+	overflow: hidden;
+	transition: 0.5s ease;
+}
 
-@media (orientation: portrait) { 
-	h3 span::after { 
+#arrow:hover {
+	border: 4px solid #ffffff;
+}
+
+.icon-down-open {
+	color: #ffffff;
+}
+
+@media (orientation: portrait) {
+	h3 span::after {
 	content: '\A';
 	white-space: pre;
+	}
+}
+
+@media (orientation: landscape) {
+	header img {
+		height: 60%;
+		right: 16%;
 	}
 }
