@@ -89,6 +89,21 @@ header h3 {
 	color: #ffffff;
 }
 
+.container {
+	width: 100vw;
+	height: 100vh;
+}
+
+.left {
+	height: 12vw;
+	background-color: blue;
+}
+
+.right {
+	height: 12vw;
+	background-color: red;
+}
+
 @media (orientation: portrait) {
 	h3 span::after {
 	content: '\A';
