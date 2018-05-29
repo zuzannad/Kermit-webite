@@ -28,6 +28,12 @@ main {
 	margin-top: 100vh;
 	z-index: 2; /*nachodzenie elementów na header*/
 	position: relative; /*nachodzenie elementów na header*/
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas:
+	"left-top right-top"
+	"left-bottom right-bottom"
 }
 
 header img {
@@ -89,23 +95,36 @@ header h3 {
 	color: #ffffff;
 }
 
-.container {
-	width: 100vw;
-	height: 100vh;
+.left, .right {
+	width: 100%
 }
 
-.left {
-	height: 12vw;
+#left-top {
+	/*height: 12vw;*/
 	background-color: blue;
+	grid-area: left-top;
 }
 
-.right {
-	height: 12vw;
+#left-bottom {
+	/*height: 12vw;*/
+	background-color: blue;
+	grid-area: left-bottom;
+}
+
+#right-top {
+	/*height: 12vw;*/
 	background-color: red;
+	grid-area: right-top;
+}
+
+#right-bottom {
+	/*height: 12vw;*/
+	background-color: red;
+	grid-area: right-bottom;
 }
 
 @media (orientation: portrait) {
-	h3 span::after {
+	h3 span::after {s
 	content: '\A';
 	white-space: pre;
 	}
