@@ -101,26 +101,27 @@ header h3 {
 
 #left-top {
 	/*height: 12vw;*/
-	background-color: blue;
 	grid-area: left-top;
+
 }
 
 #left-bottom {
 	/*height: 12vw;*/
-	background-color: blue;
 	grid-area: left-bottom;
 }
 
 #right-top {
 	/*height: 12vw;*/
-	background-color: red;
 	grid-area: right-top;
 }
 
 #right-bottom {
 	/*height: 12vw;*/
-	background-color: red;
 	grid-area: right-bottom;
+}
+
+p {
+	color: black;
 }
 
 @media (orientation: portrait) {
