@@ -7,7 +7,7 @@
 
 html {
 	font-size: 10px;
-
+	font-family: 'Oswald', sans-serif;
 }
 
 header {
@@ -18,7 +18,6 @@ header {
 	top: 0;  /*nachodzenie elementów na header*/
 	left: 0; /*nachodzenie elementów na header*/
 	overflow-x: hidden;
-	font-family: 'Oswald', sans-serif;
 	z-index: 1 /*który element ma być wyżej, nachodzenie elementów na header, nie działa przy position: static (domyślnej)*/
 }
 
@@ -72,6 +71,22 @@ header h3 {
 	font-weight: 400;
 }
 
+main h1 {
+	color: #e00f0f;
+	font-size: 3rem;
+}
+
+main p {
+	font-size: 2rem;
+	margin-top: 2rem;
+}
+
+main h2 {
+	color: #5FB404;
+	font-size: 1.8rem;
+	margin-top: 1.8rem;
+}
+
 #arrow {
 	width: 40px;
 	height: 40px;
@@ -102,7 +117,7 @@ header h3 {
 #left-top {
 	/*height: 12vw;*/
 	grid-area: left-top;
-
+	padding: 3rem;
 }
 
 #left-bottom {
@@ -113,6 +128,7 @@ header h3 {
 #right-top {
 	/*height: 12vw;*/
 	grid-area: right-top;
+	padding: 3rem;
 }
 
 #right-bottom {
